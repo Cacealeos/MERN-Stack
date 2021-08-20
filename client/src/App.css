@@ -1,0 +1,153 @@
+.App {
+    text-align: center;
+    display: flex;
+}
+
+:root {
+    --bg: #242526;
+    --bg-accent: #484a4d;
+    --text-color: #dadce1;
+    --border: 1px solid #474a4d;
+    --border-radius: 8px;
+    --speed: 500ms;
+}
+
+.dropdownR {
+    position: relative;
+    color: white;
+    transform: translateX(0%);
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    transition: height var(--speed) ease;
+}
+
+.dropdownL {
+    position: relative;
+    color: white;
+    transform: translateX(0%);
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    transition: height var(--speed) ease;
+}
+
+.item {
+    height: 50px;
+    display: flex;
+    align-items: stretch;
+    border-radius: var(--border-radius);
+    background-color: var(--bg);
+    transition: background var(--speed) ease;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.item:hover {
+    background-color: #525357;
+}
+
+.item-button {
+    background-color: var(--bg); 
+    border: none;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+}
+.bold {
+    background-color: var(--bg);
+}
+
+.bEntry-primary-enter {
+    position: absolute;
+    transform: translateY(50%);
+}
+
+.bEntry-primary-enter-active {
+    transform: translateY(0%);
+    transition: all var(--speed) ease;
+}
+
+.bEntry-primary-exit {
+    position: absolute;
+}
+
+.bEntry-primary-exit-active {
+    transform: translateX(-110%);
+    transition: all var(--speed) ease;
+}
+
+.bEntry-secondary-enter {
+    position: absolute;
+    transform: translateY(30%);
+}
+
+.bEntry-secondary-enter-active {
+    transform: translateY(0%);
+    transition: all var(--speed) ease;
+}
+
+.bEntry-secondary-exit {
+    position: absolute;
+}
+
+.bEntry-secondary-exit-active {
+    transform: translateX(110%);
+    transition: all var(--speed) ease;
+}
+
+.GroupSectionA,
+.GroupSectionB {
+    display: inline-flex;
+    width: 40%;
+    flex-flow: column nowrap;
+}
+
+.enemybox {
+    position: relative ;
+    background: transparent;
+    width: 50%;
+    height: 30%;
+    margin: 10px auto;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.enemybox-label {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.unitStats {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    background-color: var(--bg);
+    color: white;
+    padding: 5px;
+}
+
+.App-body1 {
+    width: 15%;
+    height: 100%;
+    float: left;
+    background: green;
+}
+
+.App-body2 {
+    width: 15%;
+    height: 100%;
+    float: right;
+    background: red;
+}
+
+
