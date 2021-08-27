@@ -8,11 +8,12 @@ import { useState, useEffect } from 'react'
 import { fetchBestiary } from './api/indexAPI'
 import { Provider } from 'react-redux'
 import { useDispatch } from 'react-redux'
+import { getBestiary } from './actions/EntryActions'
 //import './scss/grid.scss';
 //import Enemies from './bestiaryData'
 
 function App() {
-
+    const dispatch = useDispatch();
     const [EnemyList, setEnemyList] = useState([])
     const [showHomeTeam, setHomeTeam] = useState({
         "A": {
@@ -55,21 +56,17 @@ function App() {
     const [open, setOpen] = useState(false);
     
     
-    async function fetch() {
-        const derpo = await fetchBestiary
-        .then(res => {
-            setEnemyList(res.data)
-        })
+    // async function fetch() {
+    //     const derpo = await fetchBestiary
+    //     .then(res => {
+    //         setEnemyList(res.data)
+    //     })
         
-    }
-    useEffect( () => {fetch()}, [])
-    
-    //console.log(promise);
+    // }
+    // useEffect( () => {fetch()}, [])
 
-    // const Enemies = {}
-    // const PEnemies = fetchBestiary()
-    //.then((res) => {Object.assign(Enemies, PEnemies.Data)})
-    //console.log(PEnemies)
+    useEffect( () => {dispatch(getBestiary())}, [dispatch])
+    
 
     function addGroupEntry(Enemy, gName, Team) {
 

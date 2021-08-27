@@ -2,10 +2,14 @@
 import React from 'react'
 import { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
+import { useSelector } from 'react-redux'
 import BItem from './BestiaryItem'
 
-const Bestiary = ({ Data, Click, AddtoGroup, cSS, Groups, Team }) => {
-    console.log(Data);
+const Bestiary = ({ Click, AddtoGroup, cSS, Groups, Team }) => {
+    
+    const Data = useSelector((state) => state.Entries)
+    console.log(Data)
+
     const [active, setActive] = useState('')
     const [entryHeight, setHeight] = useState(null)
 
