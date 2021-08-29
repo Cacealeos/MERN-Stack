@@ -9,9 +9,8 @@ App.use(express.json());
 App.use(cors());
 
 App.use('/Bestiary', EnemyList);
-//PW = rRfj1UJQ1PMDbfe3
-//DB = TestPyDB
-const DATABASE_URL = 'mongodb+srv://Admin:rRfj1UJQ1PMDbfe3@pycluster.ctt6i.mongodb.net/TestPyDB?retryWrites=true&w=majority'
+
+const DATABASE_URL = ''
 const PORT = process.env.PORT || 8000;
 
 
